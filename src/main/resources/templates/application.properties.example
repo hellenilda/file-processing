@@ -1,0 +1,13 @@
+spring.application.name=file-processing
+server.port=application_port
+
+# JPA and Hibernate Properties
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# PostgreSQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
