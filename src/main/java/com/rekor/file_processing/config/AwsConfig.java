@@ -9,6 +9,7 @@ import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.S3Configuration;
 import software.amazon.awssdk.services.sqs.SqsClient;
 
 @Configuration
@@ -32,10 +33,15 @@ public class AwsConfig {
         return S3Client.builder()
                 .region(Region.US_EAST_1)
                 .endpointOverride(URI.create("http://localhost:4566"))
+                .serviceConfiguration(
+                        S3Configuration.builder()
+                                .pathStyleAccessEnabled(true)
+                                .build()
+                )
                 .credentialsProvider(
-                    StaticCredentialsProvider.create(
-                        AwsBasicCredentials.create("test", "test")
-                    )
+                        StaticCredentialsProvider.create(
+                                AwsBasicCredentials.create("test", "test")
+                        )
                 )
                 .build();
     }
