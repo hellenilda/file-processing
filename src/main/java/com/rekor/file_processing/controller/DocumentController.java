@@ -1,10 +1,4 @@
-package com.rekor.file_processing.config.controller;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.rekor.file_processing.config.service.DocumentService;
-import com.rekor.file_processing.model.Document;
+package com.rekor.file_processing.controller;
 
 import java.util.Map;
 
@@ -12,6 +6,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rekor.file_processing.model.Document;
+import com.rekor.file_processing.service.DocumentService;
 
 
 @RestController

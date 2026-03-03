@@ -1,4 +1,4 @@
-package com.rekor.file_processing.config.service;
+package com.rekor.file_processing.service;
 
 import java.time.LocalDateTime;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.rekor.file_processing.model.Document;
 import com.rekor.file_processing.model.DocumentStatus;
-import com.rekor.file_processing.repository.DocumentRepository;
+import com.rekor.file_processing.model.repository.DocumentRepository;
 
 import software.amazon.awssdk.services.sqs.SqsClient;
 import software.amazon.awssdk.services.sqs.model.SendMessageRequest;

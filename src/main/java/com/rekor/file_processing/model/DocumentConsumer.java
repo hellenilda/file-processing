@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.rekor.file_processing.repository.DocumentRepository;
+import com.rekor.file_processing.model.repository.DocumentRepository;
 
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
