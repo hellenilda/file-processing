@@ -1,4 +1,4 @@
-package com.rekor.file_processing;
+package com.rekor.file_processing.config;
 
 import java.net.URI;
 
